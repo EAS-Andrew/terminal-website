@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Menlo Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Menlo Regular'), url('Menlo-Regular.woff') format('woff');
+}
+
+body {
+  /* background-color: #3c3b3b; */
+}
+
+.terminal {
+  background-color: #1e1e1e;
+  color: #fdfdfd;
+  font-family: 'Menlo Regular';
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 1px #ffffff2f;
+  height: 335px;
+  /* pointer-events: none; */
+  cursor:text;
+}
+
+.terminal > .terminal-title {
+  background-color: #39343c;
+  color: #b3aeb6;
+  height: 28px;
+  line-height: 25px;
+  font-size: 12px;
+
+  font-weight: bold;
+
+  font-family:sans-serif;
+}
+
+.terminal > .terminal-title > .title-text {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+.terminal > .terminal-title > .terminal-title-actions {
+  margin-left: 5px;
+}
+.terminal > .terminal-title > .terminal-title-actions > .action {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+margin: 6px 3px;
+}
+
+.terminal > .terminal-body {
+  padding: 5px;
+  font-size: 12px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: scroll;
+}
+
+
+input {
+  position: fixed;
+  opacity: 0;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
